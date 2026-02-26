@@ -1,15 +1,23 @@
-nav {
-    border: 2px solid aqua; 
-    border-radius: 10px ;
-    padding: 10px;
-    min-height: 5vh;
+div {
+    border: 2px solid red;
 }
 
 body {
     background-color: black;
     color: white;
     padding: 0px 0px;
+    margin: 0px 0px;
 }
+
+/* Navigation Bar */
+
+nav {
+    border: 1px solid aqua; 
+    border-radius: 10px ;
+    min-height: 5vh;
+}
+
+/* Hero Section */
 
 .hero-image-container {
     width: 100%;
@@ -22,6 +30,8 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+/* Divider */
 
 .divider-box {
     display: flex;
@@ -38,8 +48,30 @@ body {
     border-radius: 5px;
 }
 
-.vertical-column2 {
+/* About Us Section */
+
+#vertical-columns {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+#about-us-section {
+    padding: 40px;
+}
+
+#vertical-columns {
+    display: flex;
+    align-items: flex-start; 
+    gap: 40px;
+}
+
+#about-us-text {
+    flex: 1;
+}
+
+#about-us-image img {
+    height: 70vh;  
+    width: auto;   
+    display: block;
 }
