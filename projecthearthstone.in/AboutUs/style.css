@@ -1,24 +1,38 @@
-div {
-    border: 2px solid red;
+@import url(../Common/styles.css);
+@font-face {
+    font-family: 'cooper-hewitt';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/cooper-hewitt@latest/latin-400-normal.woff2)
+         format('woff2'),
+         url(https://cdn.jsdelivr.net/fontsource/fonts/cooper-hewitt@latest/latin-400-normal.woff)
+         format('woff'); /* Link: https://fontsource.org/fonts/cooper-hewitt/cdn */
 }
 
 body {
-    background-color: black;
-    color: white;
+    font-family: 'cooper-hewitt';
+    background-color: var(--bg-color);
+    color: var(--text-color);
     padding: 0px 0px;
     margin: 0px 0px;
 }
 
-/* Navigation Bar */
+button {
+    font-family: 'cooper-hewitt';
+    background-color: var(--sec-bg);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+}
 
+/* Navigation Bar */
 nav {
-    border: 1px solid aqua; 
     border-radius: 10px ;
-    min-height: 5vh;
+    min-height: 10vh;
 }
 
 /* Hero Section */
-
 .hero-image-container {
     width: 100%;
     height: 90vh;
@@ -32,32 +46,31 @@ nav {
 }
 
 /* Divider */
-
 .divider-box {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 20px 0px;
 }
 
 .divider-line {
     height: 10px;         
-    background-color: aqua;
+    background-color: var(--sec-accent-color);
     width: 90%;
-    margin: 10px 0; 
     border-radius: 5px;
 }
 
-/* About Us Section */
+/* Sections */
+.section {
+    padding: 0px 40px;
+}
 
+/* About Us Section */
 #vertical-columns {
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-
-#about-us-section {
-    padding: 40px;
 }
 
 #vertical-columns {
@@ -74,4 +87,26 @@ nav {
     height: 70vh;  
     width: auto;   
     display: block;
+}
+
+/* FAQ Section */
+#faq-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#faq-list li {
+    background-color: var(--sec-bg);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#faq-list li button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 100%;
+    text-align: left;
 }
