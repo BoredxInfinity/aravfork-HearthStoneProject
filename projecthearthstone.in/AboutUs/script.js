@@ -2,12 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("faq.json")
         .then(response => response.json())
         .then(data => {
-
             const faqList = document.getElementById("faq-list");
-
-            // Access the array inside "faq-list"
             data["faq-list"].forEach(item => {
-
+                
                 const li = document.createElement("li");
 
                 const button = document.createElement("button");
