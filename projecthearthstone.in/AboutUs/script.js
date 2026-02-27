@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     button.classList.toggle("active");
                     button.firstElementChild.classList.toggle("active");
                     answer.classList.toggle("active");
+                    button.parentElement.classList.toggle("active");
                 });
                 button.classList.add("faq-btn");
                 button.innerHTML = `

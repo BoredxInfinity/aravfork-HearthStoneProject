@@ -102,8 +102,13 @@ nav {
 #faq-list li {
     background-color: none;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     align-items: center;
+    transition: margin-bottom 0.5s ease;
+}
+
+#faq-list li.active {
+    margin-bottom: 10px;
 }
 
 #faq-list li button {
@@ -145,7 +150,8 @@ nav {
 .faq-answer {
     background-color: var(--text-bg);
     border-radius: 0px 0px 20px 20px;
-    margin-top: -10px;
+    margin-top: -20px;
+    margin-bottom: 0px;
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.5s ease;
@@ -159,5 +165,5 @@ nav {
 
 .faq-answer p {
     margin: 10px 20px;
-    padding: 10px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
 }
