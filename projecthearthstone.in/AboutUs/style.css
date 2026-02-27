@@ -55,18 +55,22 @@ nav {
 }
 
 .divider-line {
-    height: 10px;         
-    background-color: var(--sec-accent-color);
+    height: 5px;         
+    background-color: var(--accent-color);
     width: 90%;
     border-radius: 5px;
 }
 
 /* Sections */
 .section {
-    padding: 0px 40px;
+    padding: 0px 3vw;
 }
 
 /* About Us Section */
+#about-us h1 {
+    margin: 0;
+}
+
 #vertical-columns {
     display: flex;
     justify-content: space-between;
@@ -96,10 +100,9 @@ nav {
 }
 
 #faq-list li {
-    background-color: var(--sec-bg);
+    background-color: none;
     border-radius: 20px;
-    margin-bottom: 10px;
-    display: flex;
+    margin-bottom: 20px;
     align-items: center;
 }
 
@@ -109,4 +112,52 @@ nav {
     font-size: 20px;
     width: 100%;
     text-align: left;
+    transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+#faq-list li button:hover {
+    background-color: var(--sec-accent-color);
+    color: black;
+}
+
+#faq-list li button:hover .arrow-icon {
+    filter: invert(0);
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    transition: width 0.5s ease;
+    transition: height 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.arrow-icon.active {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    background-color: var(--text-bg);
+    border-radius: 0px 0px 20px 20px;
+    margin-top: -10px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    z-index: -1;
+    position: relative;
+}
+
+.faq-answer.active {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    margin: 10px 20px;
+    padding: 10px 0px 0px 0px;
 }
