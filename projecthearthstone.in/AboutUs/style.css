@@ -45,7 +45,10 @@ nav {
     height: 93vh;
     overflow: hidden;
     opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
+    animation: fadeDown 2s ease forwards;
+    margin-bottom: 15vh;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
 .hero-image-container img {
@@ -54,10 +57,7 @@ nav {
     object-fit: cover;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+@keyframes fadeDown {
     to {
         opacity: 1;
     }
